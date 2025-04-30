@@ -1,0 +1,9 @@
+/Users/trakoolthai/Desktop/game-of-life/target/debug/deps/libtiny_led_matrix-3c309836cb3291d2.rmeta: /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/lib.rs /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/control.rs /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/display.rs /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/timer.rs /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/render.rs
+
+/Users/trakoolthai/Desktop/game-of-life/target/debug/deps/tiny_led_matrix-3c309836cb3291d2.d: /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/lib.rs /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/control.rs /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/display.rs /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/timer.rs /Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/render.rs
+
+/Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/lib.rs:
+/Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/control.rs:
+/Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/display.rs:
+/Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/timer.rs:
+/Users/trakoolthai/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tiny-led-matrix-1.0.2/src/render.rs:

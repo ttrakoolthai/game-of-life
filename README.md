@@ -43,6 +43,7 @@ rustup target add thumbv7em-none-eabihf
 cargo install cargo-binutils
 rustup component add llvm-tools-preview
 cargo install probe-rs cargo-embed
+```
 
 ### 2. **Build the firmware**
 cargo build --release --target thumbv7em-none-eabihf

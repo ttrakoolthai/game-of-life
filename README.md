@@ -38,21 +38,26 @@ Overall, it was a fun project, and I hope to do more with it!
 ## Build & Flash Instructions
 
 ### 1. **Set up the Rust environment**
-```bash
+```
 rustup target add thumbv7em-none-eabihf
 cargo install cargo-binutils
 rustup component add llvm-tools-preview
 cargo install probe-rs cargo-embed
 ```
-
 ### 2. **Build the firmware**
+```
 cargo build --release --target thumbv7em-none-eabihf
+```
 
 ### 3. **Flash the program to the micro:bit**
+```
 cargo embed --release
+```
 
 ### 4. **Run the program**
+```
 cargo run --release
+```
 
 # Sources
 https://docs.rust-embedded.org/discovery/microbit/

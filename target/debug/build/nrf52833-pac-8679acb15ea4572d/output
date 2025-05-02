@@ -1,3 +1,0 @@
-cargo:rustc-link-search=/Users/trakoolthai/Desktop/game-of-life/target/debug/build/nrf52833-pac-8679acb15ea4572d/out
-cargo:rerun-if-changed=device.x
-cargo:rerun-if-changed=build.rs

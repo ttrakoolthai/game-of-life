@@ -1,6 +1,7 @@
 #![no_main]
 #![no_std]
 
+// Conway's Game of Life Implementation
 mod life;
 use life::*;
 
@@ -20,6 +21,16 @@ use nanorand::{Rng, SeedableRng, pcg64::Pcg64};
 use panic_rtt_target as _;
 use rtt_target::{rprintln, rtt_init_print};
 
+/// The program entry point for the micro:bit-based Game of Life simulation.
+///
+/// Initializes peripherals, display, and timer. Seeds the software RNG using
+/// entropy from the hardware RNG.
+///
+/// The game runs at 10 frames per second with the following options:
+///     * Button A randomizes the board,
+///     * Button B complements it
+///
+/// The board resets after going completely dark.
 #[entry]
 fn main() -> ! {
     rtt_init_print!();
@@ -67,12 +78,20 @@ fn main() -> ! {
     }
 }
 
+/// Re-seeds the software RNG using entropy from the nRF52833's hardware RNG.
+/// Source: https://github.com/pdx-cs-rust-embedded/mb2-rng
 fn reseed(sw_rng: &mut Pcg64, hw_rng: &mut HwRng) {
     let mut seed = [0; 16];
     hw_rng.random(&mut seed);
     sw_rng.reseed(seed);
 }
 
+/// Generates a new randomized 5×5 frame using the given RNG.
+///
+/// Each cell has a 50% chance of being alive (`1`) or dead (`0`).
+///
+/// # Returns
+/// A 5×5 array of `u8` values (`0` or `1`)
 fn randomized_frame<R: Rng<8>>(rng: &mut R) -> [[u8; 5]; 5] {
     let mut frame = [[0; 5]; 5];
     for row in frame.iter_mut() {
@@ -83,10 +102,15 @@ fn randomized_frame<R: Rng<8>>(rng: &mut R) -> [[u8; 5]; 5] {
     frame
 }
 
+/// Inverts each cell in the 5×5 grid: alive (`1`) becomes dead (`0`), and vice
+/// versa.
+///
+/// # Arguments
+/// * `grid` - A mutable reference to a 5×5 array representing the board state.
 fn complemented_frame(grid: &mut [[u8; 5]; 5]) {
-    for row in 0..5 {
-        for col in 0..5 {
-            grid[row][col] = 1 - grid[row][col];
+    for row in grid.iter_mut() {
+        for cell in row.iter_mut() {
+            *cell = 1 - *cell;
         }
     }
 }
